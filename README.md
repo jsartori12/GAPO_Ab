@@ -1,5 +1,5 @@
-# GAPO - Genetic algorithm for Protein Optimization
-GAPO is a _in silico_ genetic algorithm used to optimize proteins for a desired function, such as stability and affinity. The algorithm mimetizes the evolutionary process, by recombining and adding mutations to the best sequences in order to generate a new population with higher diversity and optimized for the given objetive function. 
+# GAPO Ab - Genetic algorithm for Protein Optimization - Ab
+GAPO-Ab is a specialized version of [GAPO] (https://github.com/izzetbiophysicist/GAPO) for antibody optimization, incorporating modules for CDR and framework detection, as well as VH/VL interface optimization. It also integrates antibody-specific language models to guide mutations. The algorithm mimics the evolutionary process by recombining and introducing mutations in the best sequences, generating a new population with greater diversity and optimized antibody properties.
 <br/>
 # Installing dependencies
 
