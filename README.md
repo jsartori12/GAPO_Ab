@@ -33,7 +33,7 @@ pip install -r requirements.txt
 ## Dependencies
 
 - PyRosetta
-- Python 3.x
+- Python 3.7
 - Additional requirements will be listed in requirements.txt
 
 ## Algorithm Overview
