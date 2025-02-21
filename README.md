@@ -68,8 +68,8 @@ pip install -r requirements.txt
 ΔGbind = ΔGcomplex - (ΔGAntibody + ΔGAntigen)
 ```
 
-### 2. PBEE
-Uses machine learning to predict binding free energy based on Rosetta structural descriptors.
+### 2. [PBEE](https://github.com/chavesejf/pbee)
+Uses machine learning model to predict binding free energy based on Rosetta structural descriptors.
 
 ### 3. Interface Analysis
 ```
