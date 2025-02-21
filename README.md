@@ -68,10 +68,10 @@ pip install -r requirements.txt
 ΔGbind = ΔGcomplex - (ΔGAntibody + ΔGAntigen)
 ```
 
-### 2. [PBEE](https://github.com/chavesejf/pbee)
-Uses machine learning model to predict binding free energy based on Rosetta structural descriptors.
+### 2. Protein Binder Energy Estimator (PBEE)
+Uses machine learning model [PBEE]((https://github.com/chavesejf/pbee)) to predict binding free energy based on Rosetta structural descriptors.
 
-### 3. Interface Analysis
+### 3. Interface composed score
 ```
 ΔGInterface = Σ(InterfaceGiComplex) - (Σ(InterfaceGiAntibody) + Σ(InterfaceGiAntigen))
 Final Score = ΔGInterface × Shape_Complementarity
