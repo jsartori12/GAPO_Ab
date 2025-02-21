@@ -1,5 +1,5 @@
 # GAPO Ab - Genetic algorithm for Protein Optimization - Ab
-GAPO-Ab is a specialized version of [GAPO] (https://github.com/izzetbiophysicist/GAPO) for antibody optimization, incorporating modules for CDR and framework detection, as well as VH/VL interface optimization. It also integrates antibody-specific language models to guide mutations. The algorithm mimics the evolutionary process by recombining and introducing mutations in the best sequences, generating a new population with greater diversity and optimized antibody properties.
+GAPO-Ab is a specialized version of [GAPO](https://github.com/izzetbiophysicist/GAPO) for antibody optimization, incorporating modules for CDR and framework detection, as well as VH/VL interface optimization. It also integrates antibody-specific language models to guide mutations. The algorithm mimics the evolutionary process by recombining and introducing mutations in the best sequences, generating a new population with greater diversity and optimized antibody properties.
 <br/>
 # Installing dependencies
 
