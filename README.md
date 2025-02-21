@@ -1,6 +1,6 @@
 # GAPO-Ab: Genetic Algorithm for Protein Optimization - Antibody Version
 
-GAPO-Ab is a specialized version of GAPO (Genetic Algorithm for Protein Optimization) specifically designed for antibody optimization. This tool implements a genetic algorithm approach to optimize antibody sequences for improved binding affinity and stability.
+GAPO-Ab is a specialized version of [GAPO](https://github.com/izzetbiophysicist/GAPO) specifically designed for antibody optimization. This tool implements a genetic algorithm approach to optimize antibody sequences for improved binding affinity and stability.
 
 ## Features
 
