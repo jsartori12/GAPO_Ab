@@ -258,6 +258,48 @@ class GeneticAlgoBase:
                 print(f"The file '{filename}' does not exist.")
             except Exception as e:
                 print(f"An error occurred: {e}")
+                
+        if mutation_type == "igbert":
+            pose_Sequence = ''.join(ind)
+            position = int(np.random.choice(inds_to_mut, 1))
+            Heavy_Light_chains = "D_C"
+
+            Heavy = Heavy_Light_chains.split("_")[0]
+            Light = Heavy_Light_chains.split("_")[1]
+
+            df = PDB_pose_dictionairy(self.pose)
+
+            Heavy_chain = list(pyrosetta.rosetta.core.pose.get_resnums_for_chain(self.pose, Heavy))
+            Light_chain = list(pyrosetta.rosetta.core.pose.get_resnums_for_chain(self.pose, Light))
+
+            position = int(np.random.choice(inds_to_mut, 1))
+
+            jobid = f"{self.t}_{position}_{np.random.randint(1000, 9999)}"
+            command = f"python mutation_sapiens.py --H {Heavy_chain} --L {Light_chain} --mask_position {position} --jobid {jobid}"
+            print(command)
+            subprocess.run(command, stdout=subprocess.PIPE, shell=True)
+
+            # with open(f"completed_sequence_{jobid}.txt", "r") as file:
+            #     content = file.read()
+            filename = f"completed_sequence_{jobid}.txt"
+
+            # Read the file and delete it after reading
+            try:
+                with open(filename, "r") as file:
+                    content = file.read()
+                # Save the content to a new variable or process it further
+                ind = content
+                my_dict[chain_to_mute] = ind
+                ind = "".join(my_dict.values())
+                print("File content successfully read and saved.")
+                
+                # Delete the temporary file
+                os.remove(filename)
+                print(f"Temporary file '{filename}' has been deleted.")
+            except FileNotFoundError:
+                print(f"The file '{filename}' does not exist.")
+            except Exception as e:
+                print(f"An error occurred: {e}")
         if mutation_type == "random":
             position = int(np.random.choice(inds_to_mut, 1))
             gene = self.gene_values[int(np.round(uniform(low=0, high=(len(self.gene_values)-1))))]
